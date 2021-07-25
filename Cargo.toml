@@ -1,0 +1,25 @@
+[package]
+name = "glommio-stream-body"
+version = "0.1.0"
+description = "An HttpBody implementation with efficient streaming support for the Rust HTTP library hyper"
+homepage = "https://github.com/harana-oss/glommio-stream-body"
+repository = "https://github.com/harana-oss/glommio-stream-body"
+keywords = ["rust", "glommio", "hyper", "asynchronous", "stream", "writer"]
+categories = ["asynchronous"]
+authors = ["Naden Franciscus <naden@harana.com>"]
+readme = "README.md"
+license = "MIT"
+edition = "2018"
+
+[dependencies]
+log = "0.4"
+pin-project-lite = "0.1.4"
+async-pipe = { git = "https://github.com/harana-oss/async-pipe-rs" }
+http-body = "0.4"
+bytes = "1"
+http = "0.2"
+glommio = "0.5.0"
+
+[dev-dependencies]
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
